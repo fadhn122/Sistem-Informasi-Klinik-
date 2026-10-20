@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Sistem Informasi Klinik</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #eef5f9;
+        color: #243b4a;
+    }
+
+    header {
+        background: #0a7ea4;
+        color: #fff;
+        padding: 22px;
+        text-align: center;
+    }
+
+    nav {
+        background: #075e7b;
+        text-align: center;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 12px 22px;
+    }
+
+    nav a:hover {
+        background: #0a7ea4;
+    }
+
+    main {
+        max-width: 900px;
+        margin: 25px auto;
+        padding: 22px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+
+    section:last-child {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        color: #0a7ea4;
+        border-bottom: 2px solid #cfe6ef;
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 9px;
+        margin-top: 5px;
+        border: 1px solid #b7cdd8;
+        border-radius: 5px;
+    }
+
+    button {
+        margin-top: 18px;
+        background: #0a7ea4;
+        color: #fff;
+        border: none;
+        padding: 10px 26px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #075e7b;
+    }
+
+    table {
+        width: 100%;  
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #cfe0e8;
+        padding: 9px;
+        text-align: left;
+    }
+
+    th {
+        background: #0a7ea4;
+        color: #fff;
+    }
+
+    footer {
+        text-align: center;
+        padding: 16px;
+        background: #075e7b;
+        color: #fff;
+        font-size: 13px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Sistem Informasi Klinik</h1>
+  <p>Pendaftaran Pasien, Jadwal Dokter, dan Data Pasien</p>
+</header>
+
+<nav>
+  <a href="#beranda">Beranda</a>
+  <a href="#pendaftaran">Pendaftaran</a>
+  <a href="#jadwal">Jadwal Dokter</a>
+  <a href="#pasien">Data Pasien</a>
+</nav>
+
+<main>
+
+  <section id="beranda">
+    <h2>Beranda</h2>
+<p>Selamat datang di Sistem Informasi Klinik. Silakan daftar, lihat jadwal dokter, dan cek data pasien.</p>
+<p>Klinik buka setiap hari Senin - Sabtu pukul 08.00 - 17.00 WIB. Tersedia layanan Poli Umum, Poli Gigi, Poli Anak, dan Poli Kandungan.</p>  
+  </section>
+
+  <section id="pendaftaran">
+    <h2>Pendaftaran Pasien</h2>
+    <form>
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" placeholder="Masukkan nama pasien">
+
+      <label for="tgl">Tanggal Lahir</label>
+      <input type="date" id="tgl">
+
+      <label for="jk">Jenis Kelamin</label>
+      <select id="jk">
+        <option value="">-- Pilih Jenis Kelamin --</option>
+        <option>Laki-laki</option>
+        <option>Perempuan</option>
+      </select>
+
+      <label for="poli">Poli Tujuan</label>
+      <select id="poli">
+        <option value="">-- Pilih Poli --</option>
+        <option>Poli Umum</option>
+        <option>Poli Gigi</option>
+        <option>Poli Anak</option>
+        <option>Poli Kandungan</option>
+      </select>
+
+      <label for="dokter">Dokter</label>
+      <select id="dokter">
+        <option value="">-- Pilih Dokter --</option>
+        <option>dr. Andi Pratama</option>
+        <option>dr. Sinta Dewi</option>
+        <option>drg. Budi Santoso</option>
+        <option>dr. Maya Lestari, Sp.A</option>
+        <option>dr. Rina Wulandari, Sp.OG</option>
+      </select>
+
+      <label for="keluhan">Keluhan</label>
+      <textarea id="keluhan" rows="3" placeholder="Tuliskan keluhan pasien"></textarea>
+
+      <button type="button">Daftar</button>
+    </form>
+  </section>
+
+  <section id="jadwal">
+    <h2>Jadwal Dokter</h2>
+    <table>
+      <tr>
+        <th>Dokter</th>
+        <th>Poli</th>
+        <th>Hari</th>
+        <th>Jam</th>
+      </tr>
+      <tr>
+        <td>dr. Andi Pratama</td>
+        <td>Umum</td>
+        <td>Senin - Rabu</td>
+        <td>08.00 - 12.00</td>
+      </tr>
+      <tr>
+        <td>dr. Sinta Dewi</td>
+        <td>Umum</td>
+        <td>Kamis - Sabtu</td>
+        <td>13.00 - 17.00</td>
+      </tr>
+      <tr>
+        <td>drg. Budi Santoso</td>
+        <td>Gigi</td>
+        <td>Senin - Jumat</td>
+        <td>09.00 - 15.00</td>
+      </tr>
+      <tr>
+        <td>dr. Maya Lestari, Sp.A</td>
+        <td>Anak</td>
+        <td>Selasa &amp; Kamis</td>
+        <td>10.00 - 14.00</td>
+      </tr>
+      <tr>
+        <td>dr. Rina Wulandari, Sp.OG</td>
+        <td>Kandungan</td>
+        <td>Rabu &amp; Sabtu</td>
+        <td>09.00 - 13.00</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="pasien">
+    <h2>Data Pasien</h2>
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>JK</th>
+        <th>Poli</th>
+        <th>Dokter</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Ahmad Fauzi</td>
+        <td>L</td>
+        <td>Umum</td>
+        <td>dr. Andi Pratama</td>
+        <td>Selesai</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Siti Aisyah</td>
+        <td>P</td>
+        <td>Kandungan</td>
+        <td>dr. Rina Wulandari, Sp.OG</td>
+        <td>Menunggu</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rafi Hidayat</td>
+        <td>L</td>
+        <td>Anak</td>
+        <td>dr. Maya Lestari, Sp.A</td>
+        <td>Diperiksa</td>
+      </tr>
+    </table>
+  </section>
+
+</main>
+
+<footer>&copy; 2026 Sistem Informasi Klinik</footer>
+
+</body>
+</html>
